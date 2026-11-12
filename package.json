@@ -1,0 +1,27 @@
+{
+  "name": "netcalc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Subnet, bandwidth-to-PPS and tunnel MTU/MSS calculators as a command-line tool and a TypeScript library.",
+  "keywords": ["subnet-calculator", "cidr", "ipv4", "packets-per-second", "mtu", "mss", "wireguard", "gre", "vxlan", "networking", "cli"],
+  "homepage": "https://github.com/guardxto/netcalc#readme",
+  "bugs": "https://github.com/guardxto/netcalc/issues",
+  "repository": { "type": "git", "url": "git+https://github.com/guardxto/netcalc.git" },
+  "author": "GuardX (https://guardx.to)",
+  "license": "MIT",
+  "type": "module",
+  "bin": { "netcalc": "dist/src/bin.js" },
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "exports": { ".": { "types": "./dist/src/index.d.ts", "default": "./dist/src/index.js" } },
+  "files": ["dist/src", "README.md", "LICENSE"],
+  "engines": { "node": ">=18.3" },
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && node --test dist/test/*.test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.0",
+    "typescript": "^5.9.3"
+  }
+}
